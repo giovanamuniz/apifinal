@@ -1,0 +1,38 @@
+div {
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem; // Texto menor para dispositivos pequenos
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem; // Texto confortável em telas menores
+}
+
+button {
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 640px) {
+  div {
+    padding: 0.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.875rem; // Reduz o tamanho do texto
+  }
+  button {
+    font-size: 0.875rem; // Botão ajustado para dispositivos menores
+  }
+}

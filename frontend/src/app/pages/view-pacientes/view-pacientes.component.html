@@ -1,0 +1,32 @@
+<app-lista-items
+  [title]="'Pacientes'"
+  [primaryBtnText]="'Adicionar Paciente'"
+  [primeiroAtributo]="'Nome'"
+  [segundoAtributo]="'Telefone'"
+  [terceiroAtributo]="'Cidade'"
+  [dados]="pacientes"
+  [placeholderText]="'Buscar paciente'"
+  [routePath]="'/cadastropaciente'"
+  (editar)="abrirModalEdicao($event)"
+  (excluir)="excluirPaciente($event)"
+>
+</app-lista-items>
+
+<div *ngIf="pacienteParaEditar" class="modal">
+  <div class="modal-content">
+    <h2>Editar Paciente</h2>
+    <form (ngSubmit)="salvarEdicao()">
+      <label for="nome">Nome:</label>
+      <input id="nome" [(ngModel)]="pacienteParaEditar.nome" name="nome" required />
+
+      <label for="telefone">Telefone:</label>
+      <input id="telefone" [(ngModel)]="pacienteParaEditar.telefone" name="telefone" required />
+
+      <label for="cidade">Cidade:</label>
+      <input id="cidade" [(ngModel)]="pacienteParaEditar.cidade" name="cidade" required />
+
+      <button type="submit">Salvar</button>
+      <button type="button" (click)="fecharModal()">Cancelar</button>
+    </form>
+  </div>
+</div>

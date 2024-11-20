@@ -1,0 +1,41 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 16px; 
+  border-radius: 8px;
+  padding: 16px; 
+  width: 100%; 
+  max-width: 260px; 
+  height: auto;
+  min-height: 230px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+}
+
+.card-wrapper .icon img {
+  height: 35px; 
+  width: 35px; 
+  margin-bottom: 8px; 
+}
+
+@media (min-width: 768px) {
+  .card-wrapper {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-wrapper {
+    font-size: 14px;
+    padding: 12px; 
+  }
+
+  .card-wrapper .icon img {
+    height: 30px; 
+    width: 30px; 
+  }
+}
